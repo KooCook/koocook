@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  koocook_dj:
+    container_name: koocook-dj
+    image: koocook/koocook-dj:dev
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
