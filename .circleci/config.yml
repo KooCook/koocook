@@ -7,7 +7,7 @@ jobs:
      - checkout
      - add_ssh_keys:
          fingerprints:
-           - "08:3d:2e:15:e1:c1:f6:58:5e:3d:4b:67:8e:98:59:a6"
+           - "32:a9:ee:b4:f6:93:d9:91:ef:42:14:cc:75:3d:c7:a5"
      - run:
          name: "Pull submodules"
          command: |
