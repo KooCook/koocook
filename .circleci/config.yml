@@ -24,7 +24,7 @@ jobs:
      - run:
          name: Publish the Docker image
          command: |
-           docker push company/app:$DK_TAG_NAME
+           docker push koocook/koocook-dj:$DK_TAG_NAME
 
  deploy:
    working_directory: ~/koocook
