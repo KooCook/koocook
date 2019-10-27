@@ -41,7 +41,7 @@ jobs:
      - run:
          name: Deploy to the GCE instance
          command: |
-           ./scripts/deploy.sh
+           sh ./scripts/deploy.sh
 
 workflows:
   version: 2
