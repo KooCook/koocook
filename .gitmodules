@@ -1,4 +1,4 @@
 [submodule "koocook-dj"]
 	path = koocook-dj
-	url = git@github.com:KooCook/koocook-dj.git
+	url = https://github.com/KooCook/koocook-dj.git
 	branch = dev/common
