@@ -1,12 +1,12 @@
 # KooCook!
 
-## Build status
+### Build status
 
-### `koocook-dj` - **Django backend**
+#### `koocook-dj` - **Django backend**
 
 [![CircleCI](https://circleci.com/gh/KooCook/koocook-dj/tree/master.svg?style=svg&circle-token=fd2434f2ab70aacb8216f2242e272abeae57859c)](https://circleci.com/gh/KooCook/koocook-dj/tree/master)
 
-### `koocook-proxy` - Google App Engine gateway to the backend
+#### `koocook-proxy` - Google App Engine gateway to the backend
 *awaiting creation*
 
 ----
