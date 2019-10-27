@@ -20,16 +20,16 @@ jobs:
      - run:
          name: Build the Docker image
          command: |
-           docker build -t koocook/koocook-dj:$CIRCLE_BRANCH .
+           docker build -t koocook/koocook-dj:$DK_TAG_NAME .
      - run:
          name: Publish the Docker image
          command: |
-           docker push company/app:$CIRCLE_BRANCH
+           docker push company/app:$DK_TAG_NAME
 
  deploy:
    working_directory: ~/koocook-dj
    docker:
-     - image: koocook/koocook-dj:$CIRCLE_BRANCH
+     - image: koocook/koocook-dj:$DK_TAG_NAME
        auth:
          username: $KC_DK_USER
          password: $KC_DK_PSWD
