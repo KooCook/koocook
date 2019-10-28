@@ -9,12 +9,12 @@ jobs:
          fingerprints:
            - "32:a9:ee:b4:f6:93:d9:91:ef:42:14:cc:75:3d:c7:a5"
      - run:
-         name: "Pull submodules"
+         name: "Pull latest submodules"
          command: |
            git submodule init
-           git submodule update --recursive
+           git submodule update --recursive --remote
      - run:
-         name: Authenticate
+         name: Authenticate into Docker Hub
          command: |
            echo "$KC_DK_PSWD" | docker login --username $KC_DK_USER --password-stdin
      - run:
