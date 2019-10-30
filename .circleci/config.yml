@@ -20,7 +20,12 @@ jobs:
      - run:
          name: Build the Docker image
          command: |
-           docker build -t koocook/koocook-dj:$DK_TAG_NAME ./koocook-dj/
+           docker build -t koocook/koocook-dj:$DK_TAG_NAME \
+           --build-arg SOCIAL_AUTH_GOOGLE_OAUTH2_KEY \
+           --build-arg SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET \
+           --build-arg DJANGO_SECRET_KEY \
+           --build-arg DJANGO_ALLOWED_HOSTS \
+           ./koocook-dj/
      - run:
          name: Publish the Docker image
          command: |
