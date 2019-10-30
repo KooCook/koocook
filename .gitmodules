@@ -2,3 +2,7 @@
 	path = koocook-dj
 	url = https://github.com/KooCook/koocook-dj.git
 	branch = dev/common
+[submodule "koocook-proxy"]
+	path = koocook-proxy
+	url = git@GitHub-KooCook:KooCook/koocook-proxy.git
+	branch = dev
