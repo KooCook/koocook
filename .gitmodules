@@ -4,5 +4,5 @@
 	branch = dev/common
 [submodule "koocook-proxy"]
 	path = koocook-proxy
-	url = git@GitHub-KooCook:KooCook/koocook-proxy.git
+	url = https://github.com/KooCook/koocook-proxy.git
 	branch = dev
