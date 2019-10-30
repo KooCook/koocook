@@ -3,7 +3,9 @@ cd ~/koocook-app  || exit
 
 
 gcloud auth activate-service-account --key-file gae_skey.json
-git submodule update --recursive --remote koocook-proxy/
+cd koocook-proxy/ || exit
+git pull
+cd ~/koocook-app  || exit
 gcloud app deploy koocook-proxy/app.yaml
 
 sudo docker image prune -f
