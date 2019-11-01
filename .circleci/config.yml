@@ -25,6 +25,7 @@ jobs:
            --build-arg SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET \
            --build-arg DJANGO_SECRET_KEY \
            --build-arg DJANGO_ALLOWED_HOSTS \
+           --build-arg DEBUG \
            ./koocook-dj/
      - run:
          name: Publish the Docker image
