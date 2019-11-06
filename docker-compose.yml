@@ -4,6 +4,8 @@ services:
     container_name: koocook-dj
     image: koocook/koocook-dj:dev
     restart: unless-stopped
+    env_file:
+      - config/dj.env
     ports:
       - "8000:8000"
 
