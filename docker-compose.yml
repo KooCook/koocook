@@ -6,3 +6,12 @@ services:
     restart: unless-stopped
     ports:
       - "8000:8000"
+
+  koocook-db:
+    container_name: koocook-db
+    image: postgres:alpine
+    restart: unless-stopped
+    env_file:
+      - config/db.env
+    ports:
+      - 5432:5432
