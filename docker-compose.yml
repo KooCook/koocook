@@ -1,8 +1,8 @@
 version: "3.7"
 services:
   koocook_dj:
+    build: koocook-dj/
     container_name: koocook-dj
-    image: koocook/koocook-dj:dev
     restart: unless-stopped
     env_file:
       - config/dj.env
