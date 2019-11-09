@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/koocook-app  || exit
+cd ~/koocook-app || exit
 gcloud auth activate-service-account --key-file gae_skey.json
 
 git pull
