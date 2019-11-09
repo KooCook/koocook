@@ -13,28 +13,28 @@ jobs:
          command: |
            git submodule init
            git submodule update --recursive --remote
-     - run:
-         name: Authenticate into Docker Hub
-         command: |
-           echo "$KC_DK_PSWD" | docker login --username $KC_DK_USER --password-stdin
-     - run:
-         name: Build the Docker image
-         command: |
-           docker build -t koocook/koocook-dj:$DK_TAG_NAME \
-           --build-arg SOCIAL_AUTH_GOOGLE_OAUTH2_KEY \
-           --build-arg SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET \
-           --build-arg DJANGO_SECRET_KEY \
-           --build-arg DJANGO_ALLOWED_HOSTS \
-           --build-arg DATABASE_ENGINE \
-           --build-arg DATABASE_NAME \
-           --build-arg DATABASE_USERNAME \
-           --build-arg DATABASE_PASSWORD \
-           --build-arg DATABASE_PORT \
-           ./koocook-dj/
-     - run:
-         name: Publish the Docker image
-         command: |
-           docker push koocook/koocook-dj:$DK_TAG_NAME
+#     - run:
+#         name: Authenticate into Docker Hub
+#         command: |
+#           echo "$KC_DK_PSWD" | docker login --username $KC_DK_USER --password-stdin
+#     - run:
+#         name: Build the Docker image
+#         command: |
+#           docker build -t koocook/koocook-dj:$DK_TAG_NAME \
+#           --build-arg SOCIAL_AUTH_GOOGLE_OAUTH2_KEY \
+#           --build-arg SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET \
+#           --build-arg DJANGO_SECRET_KEY \
+#           --build-arg DJANGO_ALLOWED_HOSTS \
+#           --build-arg DATABASE_ENGINE \
+#           --build-arg DATABASE_NAME \
+#           --build-arg DATABASE_USERNAME \
+#           --build-arg DATABASE_PASSWORD \
+#           --build-arg DATABASE_PORT \
+#           ./koocook-dj/
+#     - run:
+#         name: Publish the Docker image
+#         command: |
+#           docker push koocook/koocook-dj:$DK_TAG_NAME
 
      - run:
          name: Automate the deployment (after triggered)
