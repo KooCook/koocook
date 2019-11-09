@@ -4,6 +4,8 @@ services:
     build: koocook-dj/
     container_name: koocook-dj
     restart: unless-stopped
+    volumes:
+      - ./static:/usr/src/app/static
     env_file:
       - config/dj.env
     ports:
